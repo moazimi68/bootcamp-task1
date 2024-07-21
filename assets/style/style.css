@@ -1,0 +1,183 @@
+/* reset code */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  color: var(--color-body);
+}
+
+/* root */
+
+:root {
+  --color-h1: #1e1e1e;
+  --color-icon-box: #afcedd;
+  --color-h2: #234894;
+  --color-body: #696969;
+  --color-request_box: #219f95;
+  --color-white: #ffffff;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 5rem;
+  color: var(--color-h1);
+}
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-h2);
+}
+p {
+  font-size: 1.2rem;
+}
+p.name {
+  color: var(--color-h1);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.btn {
+  width: 12rem;
+  height: 5rem;
+  color: var(--color-white);
+  background-color: var(--color-request_box);
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-family: iranYekan;
+  padding: 1.1rem;
+  border: none;
+}
+
+/* project starting */
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+.upload-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 5px;
+}
+
+/* box style */
+
+.number {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-icon-box);
+  border-radius: 6px;
+  font-size: 1.8rem;
+  color: var(--color-h2);
+  text-align: center;
+  line-height: 4rem;
+  margin-left: 1rem;
+}
+.date {
+  display: block;
+  color: var(--color-body);
+}
+.upload-section__box {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.head_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.footer-box__info,
+.head_box__info {
+  display: flex;
+  align-items: center;
+}
+.right h3 {
+  padding-right: 1rem;
+}
+.footer-box {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer-box__info img {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 5px;
+  border-radius: 6px;
+}
+/* risponsive section */
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .upload-section {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 5px;
+  }
+  p.name {
+    color: var(--color-h1);
+    font-size: 1rem;
+  }
+  .btn {
+    width: 7.5rem;
+    height: 3.5rem;
+    color: var(--color-white);
+    background-color: var(--color-request_box);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-family: iranYekan;
+    padding: 0.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--color-h2);
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .upload-section {
+    grid-template-columns: 1fr;
+    margin-bottom: 5px;
+  }
+  .upload-section__box {
+    border-bottom: 1px solid black;
+  }
+  .btn {
+    width: 9rem;
+    height: 4.5rem;
+    color: var(--color-white);
+    background-color: var(--color-request_box);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: iranYekan;
+    padding: 0.5rem;
+  }
+}
